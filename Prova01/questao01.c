@@ -9,7 +9,7 @@ void entrada01(float *raio){
 
 void processamento01(float *raio, float *area, float *diametro, float *perimetro, float *volume){
     *diametro = 2 * *raio;
-    *area = 3,14 * (*raio * *raio);
+    *area = (3.14 * (*raio * *raio));
     *perimetro = 2 * 3.14 * *raio;
     *volume = (4/3) * 3.14 * *raio * *raio * *raio;
 
@@ -17,7 +17,7 @@ void processamento01(float *raio, float *area, float *diametro, float *perimetro
 
 void saida01(float raio, float area, float diametro, float perimetro, float volume){
     printf("volume = %.5f \n", volume);
-    printf("area = %.2f \n", raio);
+    printf("area = %.2f \n", area);
     printf("perimetro = %.2f \n", perimetro);
     printf("diametro = %.2f \n", diametro);
 }
@@ -27,7 +27,7 @@ void questao01 (void){
 
     entrada01(&r);
 
-    processamento01(&r, &a, &p, &d, &v);
+    processamento01(&r, &a, &d, &p, &v);
 
     saida01(r, a, d, p, v);
 
